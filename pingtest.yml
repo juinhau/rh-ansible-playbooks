@@ -4,7 +4,7 @@
   
   tasks:
     - name: install ping module
-      ansible.builtin.dnf: 
+      ansible.builtin.yum: 
         name: iputils
         state: latest
     - name: Ping google.com
