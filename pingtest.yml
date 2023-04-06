@@ -4,9 +4,4 @@
   
   tasks:
     - name: Ping google.com
-      ansible.netcommon.net_ping:
-        dest: "www.google.com"
-      
-    - name: ping redhat.com
-      ansible.netcommon.net_ping:
-        dest: "www.redhat.com"
+      shell: ping -c 1 -w "www.google.com"
