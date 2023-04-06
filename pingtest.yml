@@ -3,5 +3,9 @@
   hosts: localhost
   
   tasks:
+    - name: install ping module
+      ansible.builtin.dnf: 
+        name: iputils
+        state: latest
     - name: Ping google.com
       shell: ping -c 1 -w "www.google.com"
