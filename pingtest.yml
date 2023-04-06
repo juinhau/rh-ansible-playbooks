@@ -3,9 +3,6 @@
   hosts: localhost
   
   tasks:
-    - name: install ping module
-      ansible.builtin.yum: 
-        name: iputils
-        state: latest
     - name: Ping google.com
-      shell: ping -c 1 -w "www.google.com"
+      ansible.windows.win_ping:
+        data: "www.google.com"
